@@ -91,7 +91,7 @@ def test_all(dataset_path):
     'SVC': SVC(),
     'RandomForest_gini' : RandomForestClassifier(n_estimators=1000, criterion='gini', n_jobs=6, max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='sqrt', max_leaf_nodes=None, bootstrap=True, oob_score=True, random_state=534, verbose=0, warm_start=False, class_weight={0: 0.50 ,1: 1 - 0.5}),
     'RandomForest_entropy' : RandomForestClassifier(n_estimators=1000, criterion='entropy', n_jobs=6, max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='sqrt', max_leaf_nodes=None, bootstrap=True, oob_score=True, random_state=534, verbose=0, warm_start=False, class_weight={0: 0.50 ,1: 1 - 0.5}),
-    #RandomForest_log_loss' : RandomForestClassifier(n_estimators=1000, criterion='log_loss',n_jobs=6, max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='sqrt', max_leaf_nodes=None, bootstrap=True, oob_score=True, random_state=534, verbose=0, warm_start=False, class_weight={0: 0.50 ,1: 1 - 0.5}),
+    'RandomForest_log_loss' : RandomForestClassifier(n_estimators=1000, criterion='log_loss',n_jobs=6, max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='sqrt', max_leaf_nodes=None, bootstrap=True, oob_score=True, random_state=534, verbose=0, warm_start=False, class_weight={0: 0.50 ,1: 1 - 0.5}),
     'AdaBoost': AdaBoostClassifier(),
     'GradientBoosting_log_loss': GradientBoostingClassifier(n_estimators=1000, loss='log_loss'),
     'GradientBoosting_exp': GradientBoostingClassifier(n_estimators=1000, loss='exponential')
