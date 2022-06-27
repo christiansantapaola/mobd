@@ -56,6 +56,26 @@ def score_model(model, x, y):
     score['F1'] = f1_score(y, y_pred)
     return score
 
+def train_and_score(model, x, y, iteration=5):
+  """ train_and_score will train a model on the dataset (x,y) using a stratified Kfold strategy and return the model score."""
+  skf = StratifiedKFold(n_splits=iteration, random_state = 42, shuffle=True)
+  score = {'Accuracy': 0.0, 'Precision': 0.0, 'Recall': 0.0, 'F1': 0.0}
+  for train_index, test_index in skf.split(x, y):
+      X_train, X_test = x[train_index], x[test_index]
+      y_train, y_test = y[train_index], y[test_index]
+      model.fit(X_train, y_train)
+      y_test_pred = model.predict(X_test)
+      score['Accuracy'] += accuracy_score(y_test, y_test_pred)      
+      score['Precision'] += precision_score(y_test, y_test_pred)
+      score['Recall'] += recall_score(y_test, y_test_pred)
+      score['F1'] += f1_score(y_test, y_test_pred)
+  score['Accuracy'] /= iteration
+  score['Precision'] /= iteration
+  score['Recall'] /= iteration
+  score['F1'] /= iteration
+  return score
+
+
 def test_all(dataset_path):
   data = pd.read_csv(dataset_path)
   features = data.columns[:-1]

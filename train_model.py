@@ -81,7 +81,7 @@ def train_and_score(model, x, y, iteration=5):
 
 
 def train_model(dataset_path, save_path='model.pkl'):
-  """ train_model() will train a model from the dataset_path and save in as a pickle file on the save_path"""
+  """ train_model() will train a model from data at the dataset_path and save in as a pickle file at the save_path"""
   data = pd.read_csv(dataset_path)
   features = data.columns[:-1]
   # get data on categorical features for OrdinalEncoder.
