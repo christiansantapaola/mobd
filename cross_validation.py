@@ -48,6 +48,7 @@ def get_category_features(data, category_features_index):
   return categories
 
 def score_model(model, x, y):
+    """score_model(model, x, y) score a model on the testing set x with class y"""
     score = {'Accuracy': 0.0, 'Precision': 0.0, 'Recall': 0.0, 'F1': 0.0}
     y_pred = model.predict(x)
     score['Accuracy'] = accuracy_score(y, y_pred)      
@@ -77,6 +78,7 @@ def train_and_score(model, x, y, iteration=5):
 
 
 def test_all(dataset_path):
+  """ test_all() will prove most combination of samplers and prediction algorithm and print their results."""
   data = pd.read_csv(dataset_path)
   features = data.columns[:-1]
   category_features_index = [1,3,4,5,6,7,8,9,13]
