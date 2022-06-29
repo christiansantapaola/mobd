@@ -12,11 +12,11 @@ git clone https://github.com/christiansantapaola/mobd
 python -m venv mobd
 ```
 4. attiviamo il nuovo ambiente di sviluppo python con il seguente comando:
-    - su windows:
+- su windows:
 ``` ps
 ./mobd/Scripts/activate
 ```
-    - su linux/unix:
+- su linux/unix:
 ``` sh
 source ./mobd/bin/activate
 ```
