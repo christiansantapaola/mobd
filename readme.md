@@ -17,7 +17,7 @@ il notebook `train_model.ipynb` ricrera il file model.pkl
 ``` sh
 pip install -r requirements.txt
 ```
-2. mettere nella cartella dove è presente sia il codice che il file model.pkl il file `test.csv`.
+2. mettere nella cartella dove è presente sia il codice che il file model.pkl il file `test_set.csv`.
 3. far partire lo script `load_and_score.py`
 ## nota
 lo script `train_model.py` ricrera il file model.pkl

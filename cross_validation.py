@@ -85,6 +85,7 @@ def test_all(dataset_path):
   categories = get_category_features(data, category_features_index)
   x = data.iloc[:, :-1].to_numpy()
   y = data.iloc[:, -1].to_numpy()
+  # handle null value
   imputer = make_column_transformer(
       ('passthrough', list(range(0,1))),
       (SimpleImputer(strategy='most_frequent', missing_values=nan), [1]),
@@ -94,6 +95,7 @@ def test_all(dataset_path):
       (SimpleImputer(strategy='most_frequent', missing_values=nan), [13]),
       remainder = 'drop'
   )
+  # handle category features
   featureHandler = make_column_transformer(
     ('passthrough', list(range(0, 1))),
     (OrdinalEncoder(categories=[categories[1]]), [1]),
