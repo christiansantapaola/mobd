@@ -7,7 +7,7 @@ per motivi di compatibilità e preferibile che non vengano scambiati, usare il m
 
 # google colab
 1. Creare nella home di google drive (/drive/Mydrive) la cartella mobd e copiare all'interno il contenuto della cartella colab.
-2. mettere il file di test rinominato 'test.csv' all'interno della cartella.
+2. mettere il file di test rinominato `test_set.csv` all'interno della cartella.
 3. aprire il file load_test_and_score.ipynb e farlo partire.
 ## nota
 il notebook `train_model.ipynb` ricrera il file model.pkl
