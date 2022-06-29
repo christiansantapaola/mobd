@@ -16,6 +16,14 @@ python -m venv mobd
 ``` ps
 ./mobd/Scripts/activate
 ```
+Se lo script ritorna un errore di permessi eseguire il seguente comando su una shell powershell con permessi di amministratore:
+``` ps
+set-executionpolicy remotesigned
+```
+è possibile levare il permesso di eseguire script con il seguente comando
+``` ps
+set-executionpolicy restricted
+```
 - su linux/unix:
 ``` sh
 source ./mobd/bin/activate
