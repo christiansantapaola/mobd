@@ -51,4 +51,5 @@ def load_and_score(model_path='model.pkl', test_path='test_set.csv'):
 
 
 if __name__ == '__main__':
-    load_and_score()
+    score = load_and_score()
+    pprint(score)
