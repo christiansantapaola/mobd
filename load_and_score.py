@@ -41,6 +41,7 @@ def score_model(model, x, y):
 
 def load_and_score(model_path='model.pkl', test_path='test_set.csv'):
     """load_and_score(model_path : str, test_path : str) will load a machine learning model from a pickle file and score it on a test set stored in the csv_path."""
+    # open file, load it with pickle, load test set, then predict and score performance.
     with open(model_path, 'rb') as model_file:
         model = pickle.load(model_file)
         test_set = pd.read_csv(test_path)
