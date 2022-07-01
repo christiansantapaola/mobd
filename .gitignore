@@ -1,3 +1,2 @@
-./mobd
-./mobd/*
+mobd/
 test_set.csv
